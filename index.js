@@ -6,8 +6,6 @@ let computerScore = 0;
 function getComputerChoice() {
   let choices = Math.floor(Math.random() * 3);
 
-  // console.log(choices + " number");
-
   if (choices == 0) {
     return "Rock";
   } else if (choices == 1) {
@@ -16,8 +14,6 @@ function getComputerChoice() {
     return "Scissor";
   }
 }
-
-// getComputerChoice();
 
 function getHumanChoice() {
   let humanInput = prompt("Enter your choice, Rock, Paper or Scissor");
@@ -33,9 +29,6 @@ function getHumanChoice() {
   }
 }
 
-// getHumanChoice();
-// console.log(getComputerChoice());
-
 function playRound(humanChoice, computerChoice) {
   if (humanChoice == computerChoice) {
     humanScore++;
@@ -49,11 +42,11 @@ function playRound(humanChoice, computerChoice) {
     (humanChoice === "Scissor" && computerChoice === "Paper")
   ) {
     humanScore++;
-    // console.log(humanScore + " humanScore");
+
     return `You win! ${humanChoice} beats ${computerChoice}`;
   } else {
     computerScore++;
-    // console.log(computerScore + " computerScore");
+
     return `You loose! ${computerChoice} beats ${humanChoice}`;
   }
 }
@@ -62,8 +55,6 @@ let humanSelection;
 let computerSelection;
 
 function playGame() {
-  // alert(playRound(humanSelection, computerSelection));
-
   for (let i = 1; i <= 5; i++) {
     alert(`Round ${i} begins`);
 
@@ -84,8 +75,6 @@ function playGame() {
       : humanScore > computerScore
       ? `Human wins! with a score of ${humanScore}`
       : `Computer wins! with a score of ${computerScore}`;
-  // // alert("Total human score : " + humanScore  );
-  // // alert("Total computer score : " + computerScore);
 
   alert(finalScore);
 
